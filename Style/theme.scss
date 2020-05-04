@@ -1,3 +1,35 @@
+$spacer: 1rem;
+$spacers: ();
+$spacers: map-merge(
+   (
+      0: 0,
+      1: (
+         $spacer * 0.25,
+         //4px
+      ),
+      2: (
+         $spacer * 0.5,
+         //8px
+      ),
+      3: (
+         $spacer * 0.75,
+         //12px
+      ),
+      4: $spacer,
+      //16px
+         5:
+         (
+            $spacer * 1.5,
+            //24px
+         ),
+      6: (
+         $spacer * 3,
+         //32px
+      ),
+   ),
+   $spacers
+);
+
 $enable-rounded: false !default;
 $blue: seagreen;
 
@@ -13,4 +45,9 @@ button.btn-primary {
 button.btn-danger {
    background-color: $yellow;
    border: 1px solid $yellow;
+}
+
+button.btn-success {
+   background-color: $green;
+   border: 1px solid $green;
 }
